@@ -5,45 +5,55 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
+    public long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public StatsService service = new StatsService();
 
     @Test
     void calculateSum() {
-        StatsService service = new StatsService();
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 180;
-        long actual = service.calculateSum(purchases);
+        //long expected = 180;
+        //long actual = service.calculateSum(purchases);
 
-        assertEquals(expected, actual);
+        assertEquals(180, service.calculateSum(purchases));
     }
 
     @Test
     void findMax() {
-        StatsService service = new StatsService();
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 20;
-        long actual = service.findMax(purchases);
+        //long expected = 8;
+        //long actual = service.findMax(purchases);
 
-        assertEquals(expected, actual);
+        assertEquals(8, service.findMax(purchases));
     }
 
 
     @Test
     void minFind() {
-        StatsService service = new StatsService();
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 7;
-        long actual = service.minFind(purchases);
+        //long expected = 8;
+        //long actual = service.minFind(purchases);
 
-        assertEquals(expected, actual);
+        assertEquals(8, service.minFind(purchases));
     }
 
     @Test
     void middleValue() {
-        StatsService service = new StatsService();
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 15;
-        long actual = service.middleValue(purchases);
+        //long expected = 15;
+        //long actual = service.middleValue(purchases);
 
-        assertEquals(expected, actual);
+        assertEquals(15, service.middleValue(purchases));
+    }
+
+    @Test
+    void countMaxMiddleValue() {
+        //long expected = 5;
+        //long actual = service.middleValue(purchases);
+
+        assertEquals(5, service.maxMiddleValue(purchases));
+    }
+
+    @Test
+    void countMinMiddleValue() {
+        //long expected = 15;
+        //long actual = service.middleValue(purchases);
+
+        assertEquals(5, service.minMiddleValue(purchases));
     }
 }
