@@ -10,7 +10,7 @@ public class StatsService {
     }
 
 
-    public long findMax(long[] purchases) {
+    public long maxFind(long[] purchases) {
         long currentMax = purchases[0];
         for (long purchase : purchases) {
             if (currentMax < purchase) {
@@ -32,7 +32,7 @@ public class StatsService {
     public long minFind(long[] purchases) {
         long currentMin = purchases[0];
         for (long purchase : purchases) {
-            if (currentMin < purchase) {
+            if (currentMin > purchase) {
                 currentMin = purchase;
             }
         }

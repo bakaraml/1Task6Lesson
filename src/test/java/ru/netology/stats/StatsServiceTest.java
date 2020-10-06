@@ -17,11 +17,11 @@ class StatsServiceTest {
     }
 
     @Test
-    void findMax() {
+    void maxFind() {
         //long expected = 8;
         //long actual = service.findMax(purchases);
 
-        assertEquals(8, service.findMax(purchases));
+        assertEquals(8, service.maxFind(purchases));
     }
 
 
@@ -30,7 +30,7 @@ class StatsServiceTest {
         //long expected = 8;
         //long actual = service.minFind(purchases);
 
-        assertEquals(8, service.minFind(purchases));
+        assertEquals(9, service.minFind(purchases));
     }
 
     @Test
